@@ -1,0 +1,288 @@
+/* HEADING */
+.navbars_iconout{
+    position: relative;
+    height: 50px;
+    display: none;
+}
+.navbars_icon{
+    position: absolute;
+    right:.4rem;
+    top: .1rem;
+    font-size: 1.7rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    border-radius: 5px;
+    border: 1px solid rgb(121, 121, 121);
+    display: none;
+    text-align: center;
+    line-height: 45px;
+}
+
+.navbars_icon .fa-times{ 
+    display: none;
+}
+
+.open__navbars .fa-times{
+    display: block;
+    line-height: 45px;
+}
+
+.open__navbars .fa-bars{
+    display: none;
+}
+
+.open__navbars .heading{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.open__navbars .container_center{
+    display: block;
+    background-color: #ffffff;
+    color: #333333;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70%;
+}
+
+.open__navbars .logo{
+    display: none;
+}
+
+.open__navbars .heading .top_head p{
+    display: none;
+}
+
+.open__navbars .heading .top_head{
+    top: 1rem;
+}
+
+.open__navbars .heading .top_head .icon_login{
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    bottom: 0;
+    justify-content: space-around;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.open__navbars .heading .top_head .icon_login a:last-child{
+    background-color: #00cdce;
+    margin-top: .9rem;
+}
+
+.open__navbars .heading .top_head .icon_login a:last-child:hover{
+    border-color: #333333;
+
+}
+
+.open__navbars .heading .container_center .container_menu{
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.open__navbars .heading .container_center .container_menu li{
+    
+    width: 100%;
+}
+
+.open__navbars .heading .container_center .container_menu li span{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 4rem;
+    color: rgb(141, 141, 141);
+    text-transform: capitalize;
+}
+
+.open__navbars .heading .container_center .container_menu li a:hover{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
+
+.open__navbars .heading .container_center .container_menu li a:hover span{
+    color: rgb(32, 32, 32);
+}
+
+.open__navbars .heading .container_center .container_menu li a{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.open__navbars .heading .container_menu li a span i{
+    display: inline-block;
+    margin-right: 1.5rem ;
+}
+
+@media only screen and (max-width: 739px) {
+    .center_header{
+        font-size: 1.5rem;
+        top: 2rem;
+    }
+
+    /* HEADING */
+    .navbars_icon{
+        display: block;
+    }
+
+    .heading {
+        max-height: 100vh;
+    }
+
+    .container_center{
+        display: none;
+    }
+
+    .navbars_iconout{
+        display: block;
+    }
+
+    /* CAROUSEL */
+    .home_carousel {
+        height: 400px;
+    }
+
+    .main_carousel .textin_carousel{
+        top: 55%;
+    }
+
+    .main_carousel .textin_carousel h3{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .main_carousel .textin_carousel p{
+        font-size: 1rem;
+    }
+
+    .carousel-indicators li{
+        width: .5rem;
+        height: .5rem;
+    }
+
+    .fa-chevron-left:before{
+        margin-left: 20px;
+        font-size: 1.2rem;
+
+    }
+    .fa-chevron-right:before{
+        margin-right: 20px;
+        font-size: 1.2rem;
+    }
+
+    .carousel-indicators{
+        padding: 0;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* BOOKING */
+    .booking{
+        height: 650px;
+    }
+
+    #container_bk{
+        display: block;
+    }
+
+    .booking .booking_con{
+        width: 90%;
+    }
+
+    .booking .booking_con .booking_componant{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px 0;
+        height: 75%;
+    }
+    .booking .booking_con .booking_componant div{
+        margin: 0;
+    }
+    .booking .booking_con .booking_componant .line_go{
+        width: 90%;
+    }
+
+    .end_bk, .start_bk{
+        margin: 0 !important;
+    }
+
+    .booking .booking_con .booking_componant .swap_icon{
+        width: 65px;
+        height: 65px !important;
+    }
+
+    .booking .booking_con .booking_componant .set_day{
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .booking .container_center .booking_componant .looking_for{
+        position: static;
+        margin-top: 20px;
+        width: 250px;
+        height: 50px;
+    }
+
+    /* GỢI Ý CHUYẾN PHỔ BIẾN */
+    .sugges{
+        height: 1550px;
+    }
+
+    .sugges_con{
+        width: 100%;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .sugges_in{
+        width: 95%;
+    }
+
+    .sugges_con .sugges_grid{ 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-gap: 10px;
+        height: 90%;
+    }
+
+    .info_togo p{
+        font-size: .9rem;
+    }
+
+    .info_togo .icon_den{
+        bottom: 0;
+        margin: 0 3px;
+    }
+
+    .info_togo .icon_den .fa-chevron-right:before{
+        font-size: 15px;
+        margin-right: 0;
+    }
+
+    .choose_onebtn a{
+        font-size: .7rem;
+        min-width: 100px;
+        padding: 5px  10px;
+    }
+    
+    .choose_onebtn{
+        left: 54%;
+    }
+
+    .infomation_bus{
+        font-size: 13px;
+    }
+}

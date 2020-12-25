@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "thanhToanView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sScript{
+    <script src="~/resources/js/quytrinh_datvexe.js"></script>
+    <script src="~/resources/js/datvexe.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+@section sCss{
+    <link rel="stylesheet" href="~/resources/css/datvexe.css">
+}
+<section class="datvexe" id="uptoall">
+    <div class="main-container">
+        <div class="choose-hinhthuc">
+            <h2 class="cht-tt">chọn hình thức thanh toán</h2>
+            <label class="hinhthuc-item ht-it1" for="cht-visa">
+                <input type="radio" name=chonhinhthuc class="cht-raido" id="cht-visa">
+                <img src="~/resources/img/visa.png" alt="">
+                <p class="name-cht">Thẻ Quốc tế Visa/Master/JCB</p>
+            </label>
+
+            <label class="hinhthuc-item ht-it1" for="cht-noidia">
+                <input type="radio" name=chonhinhthuc class="cht-raido" id="cht-noidia">
+                <img src="~/resources/img/noidia.png" alt="">
+                <p class="name-cht">Thẻ ATM nội địa</p>
+            </label>
+
+            <label class="hinhthuc-item ht-it1" for="cht-futa">
+                <input type="radio" name=chonhinhthuc class="cht-raido" id="cht-futa">
+                <img src="~/resources/img/futa.png" alt="">
+                <p class="name-cht">Tài khoản FUTA Bus</p>
+            </label>
+
+            <label class="hinhthuc-item ht-it1" for="cht-momo">
+                <input type="radio" name=chonhinhthuc class="cht-raido" id="cht-momo">
+                <img src="~/resources/img/momo.png" alt="">
+                <p class="name-cht">Ví MoMo</p>
+            </label>
+
+            <label class="hinhthuc-item ht-it1" for="cht-zalo">
+                <input type="radio" name=chonhinhthuc class="cht-raido" id="cht-zalo">
+                <img src="~/resources/img/zalo.png" alt="">
+                <p class="name-cht">Ví ZaloPay</p>
+            </label>
+
+            <label class="hinhthuc-item ht-it1" for="cht-vnpay">
+                <input type="radio" name=chonhinhthuc class="cht-raido" id="cht-vnpay">
+                <img src="~/resources/img/vnpay.png" alt="">
+                <p class="name-cht">VN Pay</p>
+            </label>
+        </div>
+
+        <div class="next-pre">
+            <div class="pre"><a href="@Url.Action("datve1")"><i class="fas fa-chevron-left"></i> Quay lại</a></div>
+            <div class="next"><a href="@Url.Action("camOnView")">Tiếp tục <i class="fas fa-chevron-right"></i></a></div>
+        </div>
+    </div>
+</section>

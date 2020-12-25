@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "tracuuve";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sCss
+{
+    <link rel="stylesheet" href="~/resources/css/datvexe.css">
+}
+@section sScript{
+    <script src="~/resources/js/quytrinh_datvexe.js"></script>
+    <script src="~/resources/js/datvexe.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+@model IEnumerable<VeXe.Models.thongTinVe>
+
+    <section class="datvexe" id="uptoall">
+    <div class="main-container">
+        <div class="tracuu-ve">
+
+            <div class="hienthi-ttve">
+                <div class="mess-baoloi">*Không tìm thấy vé, hãy chắc chắc bạn nhập đúng mã vé</div>
+                <div class="vecuaban">
+                    <div class="vecb-head">
+                        <img src="~/resources/img/homeBUS.png" alt="">
+                        <div class="tt-lienhe">
+                            <h3>Thông tin liên hệ:</h3>
+                            <p class="lienhe-ten"></p>
+                            <p class="lh-mail">
+                                <span class="tieude-mini">Email: </span>
+                                @foreach (var item in ViewBag.tv)
+                                {
+                                    <span class="lienhe-sdt">@item.khachhangdetails.email</span>
+                                }
+                            </p>
+                                <p class="lh-sdt">
+                                    <span class="tieude-mini">SĐT: </span>
+                                    @foreach (var item in ViewBag.tv)
+                                    {
+                                        <span class="lienhe-sdt">@item.khachhangdetails.sdt</span>
+
+                                    }
+                                </p>
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="vecb-info">
+                        <h3>Thông tin chuyến xe:</h3>
+                        @foreach (var item in ViewBag.tv)
+                        {
+                            <p class="vecb-lotrinh"><span class="vcb-start">@item.tuyendetails.noibatdau</span> => <span class="vcb-end">@item.tuyendetails.noiketthuc</span></p>
+                            <p class="vecb-time"></p>
+                         }
+                            <p class="vecb-ngaykh">
+                                <span class="tieude-mini">Ngày khởi hành: </span>
+                                @foreach (var item in ViewBag.tv)
+                                {
+                                    <span class="vcb-ngaykh">@item.lotrinhdeatils.thoigian</span>
+                                }
+
+                            </p>
+                            <p class="vecb-soghe">
+                                <span class="tieude-mini">Số ghế: </span>
+                                @foreach (var item in ViewBag.tv)
+                                {
+                                    <span class="vcb-soghe">@item.ghedetails.soghe</span>
+                                }
+
+                            </p>
+                            <p class="vecb-dlx">
+                                <span class="tieude-mini">Tên khách hàng:</span>
+                                @foreach (var item in ViewBag.tv)
+                                {
+                                    <span class="vcb-diemlx">@item.khachhangdetails.tenkh</span>
+                                }
+
+                            </p>
+                            <p class="vecb-giave">
+                                <span class="tieude-mini">Giá vé:</span>
+                                @foreach (var item in ViewBag.tv)
+                                {
+                                    <span class="vcb-giave">@item.lotrinhdeatils.gia</span>
+                                }
+
+                                <span>VND</span>
+                            </p>
+                            <p class="vecb-sl">
+                                <span class="tieude-mini">Số lượng vé:</span>
+                                <span class="vcb-sl">1</span>
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="end-dv-bth">
+            <a class="backtohome-btn btn-tcve" href="@Url.Action("homepageView", "Home")">Trở về trang chủ</a>
+        </div>
+    </div>
+</section>
+<script>
+
+
+</script>
+

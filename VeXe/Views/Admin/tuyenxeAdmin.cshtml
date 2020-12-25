@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/resources/css/fontawesome-free/css/all.min.css">
+    
+    <link rel="stylesheet" href="~/resources/css/mainAdmin.css" type="text/css">
+</head>
+<body class="overlay-scrollbar">
+    <!-- navbar -->
+    <div class="navbar">
+        <!-- nav left -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-bars" onclick="collapseSidebar()"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-mainlogo">
+                    <img src="~/resources/img/homeBUS.png" alt="logo">
+                </a>
+            </li>
+        </ul>
+        <!-- end nav left -->
+        <!-- form -->
+        <form class="navbar-search">
+            <input type="text" name="Search" class="navbar-search-input" placeholder="What you looking for...">
+            <i class="fas fa-search"></i>
+        </form>
+        <!-- end form -->
+        <!-- nav right -->
+        <ul class="navbar-nav nav-right">
+            <li class="nav-item mode">
+                <a class="nav-link" href="#" onclick="switchTheme()">
+                    <i class="fas fa-moon dark-icon"></i>
+                    <i class="fas fa-sun light-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link">
+                    <i class="fas fa-bell dropdown-toggle" data-toggle="notification-menu"></i>
+                    <span class="navbar-badge">15</span>
+                </a>
+                <ul id="notification-menu" class="dropdown-menu notification-menu">
+                    <div class="dropdown-menu-header">
+                        <span>
+                            Notifications
+                        </span>
+                    </div>
+                    <div class="dropdown-menu-content overlay-scrollbar scrollbar-hover">
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    <br>
+                                    <span>
+                                        15/07/2020
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="dropdown-menu-footer">
+                        <span>
+                            View all notifications
+                        </span>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item avt-wrapper">
+                <div class="avt dropdown">
+                    <img src="~/resources/img/nhi.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+                    <ul id="user-menu" class="dropdown-menu">
+                        <li class="dropdown-menu-item">
+                            <a class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="far fa-credit-card"></i>
+                                </div>
+                                <span>Payments</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-spinner"></i>
+                                </div>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-menu-link">
+                                <div>
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </div>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- end nav right -->
+    </div>
+    <!-- end navbar -->
+    <!-- sidebar -->
+    <div class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-item sidebar-nav-dashboard">
+                <a href="@Url.Action("mainAdmin","Admin")" class="sidebar-nav-link ">
+                    <div>
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <span>
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="@Url.Action("xeAdmin", "Admin")" class="sidebar-nav-link sidebar-nav-xe active">
+                    <div>
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <span>Xe</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="@Url.Action("veAdmin", "Admin")" class="sidebar-nav-link sidebar-nav-ve">
+                    <div>
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <span>Vé</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item sidebar-nav-khachhang">
+                <a href="@Url.Action("khachhangAdmin", "Admin")" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <span>Khách hàng</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="@Url.Action("lotrinhAdmin", "Admin")" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <span>Lộ trình</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="@Url.Action("tuyenxeAdmin", "Admin")" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-adjust"></i>
+                    </div>
+                    <span>Tuyến</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="@Url.Action("thongkeAdmin", "Admin")" class="sidebar-nav-link sidebar-nav-thongke">
+                    <div>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span>Thống kê</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- end sidebar -->
+    <!-- main content -->
+    <div class="wrapper">
+
+        <div class="row">
+            <div class="col-12 col-m-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>
+                            Customer Penguins
+                        </h3>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="card-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Mã tuyến</th>
+                                    <th>Nơi đi</th>
+                                    <th>Nơi đến</th>
+                                    <th>Thời gian</th>
+                                    <th>Quãng đường</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>59 - 86546</td>
+                                    <td>Hồ Chí Minh</td>
+                                    <td>Hà Nội</td>
+                                    <td>2 days</td>
+                                    <td>1km</td>
+                                    <td class="action-information">
+                                        <div class="update-info action-info">Sửa</div>
+                                        <div class="delete-info action-info">Xóa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>59 - 86546</td>
+                                    <td>Hồ Chí Minh</td>
+                                    <td>Hà Nội</td>
+                                    <td>2 days</td>
+                                    <td>1km</td>
+                                    <td class="action-information">
+                                        <div class="update-info action-info">Sửa</div>
+                                        <div class="delete-info action-info">Xóa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>59 - 86546</td>
+                                    <td>Hồ Chí Minh</td>
+                                    <td>Hà Nội</td>
+                                    <td>2 days</td>
+                                    <td>1km</td>
+                                    <td class="action-information">
+                                        <div class="update-info action-info">Sửa</div>
+                                        <div class="delete-info action-info">Xóa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>59 - 86546</td>
+                                    <td>Hồ Chí Minh</td>
+                                    <td>Hà Nội</td>
+                                    <td>2 days</td>
+                                    <td>1km</td>
+                                    <td class="action-information">
+                                        <div class="update-info action-info">Sửa</div>
+                                        <div class="delete-info action-info">Xóa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>59 - 86546</td>
+                                    <td>Hồ Chí Minh</td>
+                                    <td>Hà Nội</td>
+                                    <td>2 days</td>
+                                    <td>1km</td>
+                                    <td class="action-information">
+                                        <div class="update-info action-info">Sửa</div>
+                                        <div class="delete-info action-info">Xóa</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>59 - 86546</td>
+                                    <td>Hồ Chí Minh</td>
+                                    <td>Hà Nội</td>
+                                    <td>2 days</td>
+                                    <td>1km</td>
+                                    <td class="action-information">
+                                        <div class="update-info action-info">Sửa</div>
+                                        <div class="delete-info action-info">Xóa</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btn-themtt">
+                    <button id="myBtn"> Thêm  tuyến</button>
+                </div>
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Thêm  tuyến mới</h2>
+                        </div>
+                        <div class="form-themxe">
+                            <form action="">
+                                <div class="form-group">
+                                    <label>Nơi đi:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nơi đến:</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Thời gian:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Quãng đường:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </form>
+                            <div class="process-update">
+                                <div class="cancel-update">Hủy</div>
+                                <div class="accept-update">Thêm  tuyến</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="myModal-update" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Sửa thông tin  tuyến</h2>
+                        </div>
+                        <div class="form-themxe">
+                            <form action="">
+                                <div class="form-group">
+                                    <label>Nơi đi:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nơi đến:</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Thời gian:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Quãng đường:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </form>
+                            <div class="process-update">
+                                <div class="cancel-update">Hủy</div>
+                                <div class="accept-update">Sửa</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="myModal-delete" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Chắc chắc muốn xóa trường này</h2>
+                        </div>
+                        <div class="form-themxe">
+                            <div class="process-update">
+                                <div class="cancel-update">Hủy</div>
+                                <div class="accept-update">Xóa</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end main content -->
+    <!-- import script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="~/resources/js/mainAdmin.js"></script>
+    <script src="~/resources/js/openModal.js"></script>
+    <!-- end import script -->
+</body>
+</html>

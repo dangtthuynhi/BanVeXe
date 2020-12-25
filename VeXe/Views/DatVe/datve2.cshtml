@@ -1,0 +1,371 @@
+﻿
+@{
+    ViewBag.Title = "datve2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sScript{
+    <script src="~/resources/js/quytrinh_datvexe.js"></script>
+    <script src="~/resources/js/datvexe.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+@section sCss{
+    <link rel="stylesheet" href="~/resources/css/datvexe.css">
+}
+@using System.ComponentModel
+@*@using VeXe.Models
+@model List<string>
+@{
+    List<trangthaighe> dstt = new List<trangthaighe>();
+    List<string> dsGhe = new List<string>()
+    {
+        "A01", "A02", "A03", "A04", "A05", "A06", "A07", "A08", "A09"
+        , "A10", "A11", "A12", "A13", "A14", "A15", "A16", "A17", "A18", "A19"
+        , "A20", "A21", "A22", "B01", "B02", "B03", "B04", "B05", "B06", "B07"
+        , "B08", "B09", "B10", "B11", "B12", "B13", "B14", "B15", "B16", "B17"
+        , "B18", "B19", "B20", "B21", "B22"
+    };
+    if (Model != null)
+    {
+        for (int i = 0; i < dsGhe.Count(); i++)
+        {
+            foreach (var item in Model)
+            {
+                if (item.Contains(dsGhe[i]) == true)
+                {
+                    dstt.Add(new trangthaighe(dsGhe[i], 1));
+                }
+                else
+                {
+                    dstt.Add(new trangthaighe(dsGhe[i], 0));
+                }
+            }
+        }
+    }
+    else {
+        for (int i = 0; i < dsGhe.Count(); i++)
+        {
+            dstt.Add(new trangthaighe(dsGhe[i], 0));
+                
+        }
+    }
+
+}*@
+<section class="datvexe" id="uptoall">
+<div class="main-container">
+<div class="datvexe-header">
+    <h1>Du lịch cùng Penguins</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel facere a at expedita autem ratione
+        repellat non porro dolores rerum dicta, totam libero commodi atque veniam unde voluptate corrupti
+        itaque!
+    </p>
+</div>
+<div class="booking-steps">
+    <div class="line">
+        <div class="step-componant step-1"></div>
+        <div class="step-componant step-2"></div>
+        <div class="step-componant step-3"></div>
+        
+    </div>
+    <div class="step">
+        <p class="step-number step-num1"><span>1</span></p>
+        <p class="step-number step-num2"><span>2</span></p>
+        <p class="step-number step-num3"><span>3</span></p>
+        <p class="step-number step-num4"><span>4</span></p>
+    </div>
+</div>
+<div class="second-datvexe">
+<div class="s-thongtin">
+    <div class="set-thongtin">
+        <p class="s-time s-head">
+            <span class="time-gio">05:00</span>
+            <span class="time-ngay">20/11/2020</span>
+        </p>
+        <h2 class="s-tuyendi">
+            <p class="s-xuatphat">TP Hồ Chí Minh</p>
+            <p>=></p>
+            <p class="s-diemden">Phú Yên</p>
+        </h2>
+        <div class="s-chonbenxe">
+            <p class="s-lable">Chọn bến xe</p>
+            <div class="s-chonben option-1">
+                <p class="benxe">Ngã tư Thủ Đức => Phú Yên</p>
+                <p class="s-giave">200000</p>
+                <input type="radio" checked name="s-chonben-gia">
+            </div>
+            <div class="s-chonben option-1">
+                <p class="benxe">TP Hồ Chí Minh => Phú Yên</p>
+                <p class="s-giave">500000</p>
+                <input type="radio" checked name="s-chonben-gia">
+            </div>
+        </div>
+        <div class="s-giodi">
+            <p class="s-lable">Giờ khởi hành</p>
+            <select name="time-lenxe" id="" class="chon-gio s-select">
+                <option value="17h30">17h30</option>
+                <option value="18h">18h</option>
+                <option value="18h30">18h30</option>
+                <option value="19h">19h</option>
+            </select>
+        </div>
+        <div class="s-diemlenxe">
+            <p class="s-lable">Điểm lên xe</p>
+            <!-- <input type="text" class="chon-diem s-select"> -->
+            <select name="diem-lenxe" id="" class="chon-diem s-select">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="thongtin-lichtrinh">
+        <div class="control-lich">
+            <p class="s-head ">Lịch trình chuyến đi</p>
+            <div class="icon-controll">
+                <i class="fas fa-chevron-up"></i>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="lichtrinh-main">
+            <div class="lt-head">
+                <p>Thời gian</p>
+                <p>Địa điểm</p>
+            </div>
+            <div class="ltinside-contnet">
+                <div class="lt-time">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span class="lt-date">20/11/2020</span>
+                    <span class="lt-thoigian">6:40</span>
+                </div>
+                <div class="lt-lotrinh">
+                    <h3 class="lt-tinhthanh">Phú Yên</h3>
+                    <p class="tinhthanh-adress">Hòa Xuân Tây, huyện Đông Hòa, tỉnh Phú Yên</p>
+                </div>
+            </div>
+            <div class="ltinside-contnet">
+                <div class="lt-time">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span class="lt-date">20/11/2020</span>
+                    <span class="lt-thoigian">6:40</span>
+                </div>
+                <div class="lt-lotrinh">
+                    <h3 class="lt-tinhthanh">Phú Yên</h3>
+                    <p class="tinhthanh-adress">Hòa Xuân Tây, huyện Đông Hòa, tỉnh Phú Yên</p>
+                </div>
+            </div>
+            <div class="ltinside-contnet">
+                <div class="lt-time">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span class="lt-date">20/11/2020</span>
+                    <span class="lt-thoigian">6:40</span>
+                </div>
+                <div class="lt-lotrinh">
+                    <h3 class="lt-tinhthanh">Phú Yên</h3>
+                    <p class="tinhthanh-adress">Hòa Xuân Tây, huyện Đông Hòa, tỉnh Phú Yên</p>
+                </div>
+            </div>
+            <div class="ltinside-contnet">
+                <div class="lt-time">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span class="lt-date">20/11/2020</span>
+                    <span class="lt-thoigian">6:40</span>
+                </div>
+                <div class="lt-lotrinh">
+                    <h3 class="lt-tinhthanh">Phú Yên</h3>
+                    <p class="tinhthanh-adress">Hòa Xuân Tây, huyện Đông Hòa, tỉnh Phú Yên</p>
+                </div>
+            </div>
+            <div class="ltinside-contnet">
+                <div class="lt-time">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span class="lt-date">20/11/2020</span>
+                    <span class="lt-thoigian">6:40</span>
+                </div>
+                <div class="lt-lotrinh">
+                    <h3 class="lt-tinhthanh">Phú Yên</h3>
+                    <p class="tinhthanh-adress">Hòa Xuân Tây, huyện Đông Hòa, tỉnh Phú Yên</p>
+                </div>
+            </div>
+            <div class="ltinside-contnet">
+                <div class="lt-time end">
+                    <i class="fab fa-telegram-plane"></i>
+                    <span class="lt-date">20/11/2020</span>
+                    <span class="lt-thoigian">6:40</span>
+                </div>
+                <div class="lt-lotrinh">
+                    <h3 class="lt-tinhthanh">Phú Yên</h3>
+                    <p class="tinhthanh-adress">Hòa Xuân Tây, huyện Đông Hòa, tỉnh Phú Yên</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="chon-ghe">
+    <div class="main-chonghe-container">
+        <p class="s-head cghe-head">Sơ đồ ghế</p>
+        <div class="ghe-componant">
+            <div class="tang-1 sodo-ghe">
+                <p class="ghe-head">Tầng 1</p>
+                <div class="ghe-container">
+                    <div class="ghe-item a-item1" id="A01">A01</div>
+                    <div class="ghe-item a-item2" id="A02">A02</div>
+                    <div class="ghe-item a-item3" id="A03">A03</div>
+                    <div class="ghe-item a-item4" id="A04">A04</div>
+                    <div class="ghe-item a-item5" id="A05">A05</div>
+                    <div class="ghe-item a-item6" id="A06">A06</div>
+                    <div class="ghe-item a-item7" id="A07">A07</div>
+                    <div class="ghe-item a-item8" id="A08">A08</div>
+                    <div class="ghe-item a-item9" id="A09">A09</div>
+                    <div class="ghe-item a-item10" id="A10">A10</div>
+                    <div class="ghe-item a-item11" id="A11">A11</div>
+                    <div class="ghe-item a-item12" id="A12">A12</div>
+                    <div class="ghe-item a-item13" id="A13">A13</div>
+                    <div class="ghe-item a-item14" id="A14">A14</div>
+                    <div class="ghe-item a-item15" id="A15">A15</div>
+                    @*@for (int i = 0; i < 15; i++)
+                    {
+                        if (dstt[i].trangthai == 0)
+                        {
+                            <div class="ghe-item">@dstt[i].soghe</div>
+                        }
+                        else
+                        {
+                            <div class="ghe-dachon">@dstt[i].soghe</div>
+                        }
+                    }*@
+                    <div class="mini-container">
+                        <div class="ghe-item g-item16" id="A16">A16</div>
+                        <div class="ghe-item g-item17" id="A17">A17</div>
+                        @*@for (int i = 15; i < 17; i++)
+                        {
+                            if (dstt[i].trangthai == 0)
+                            {
+                                <div class="ghe-item">@dstt[i].soghe</div>
+                            }
+                            else
+                            {
+                                <div class="ghe-dachon">@dstt[i].soghe</div>
+                            }
+                        }*@
+                    </div>
+                    <div class="mini-container mini-container-bt">
+                        <div class="ghe-item-bt ghe-item a-item18" id="A18">A18</div>
+                        <div class="ghe-item-bt ghe-item a-item19" id="A19">A19</div>
+                        <div class="ghe-item-bt ghe-item a-item20" id="A20">A20</div>
+                        <div class="ghe-item-bt ghe-item a-item21" id="A21">A21</div>
+                        <div class="ghe-item-bt ghe-item a-item22" id="A22">A22</div>
+                        @*@for (int i = 17; i < 22; i++)
+                        {
+                            if (dstt[i].trangthai == 0)
+                            {
+                                <div class="ghe-item">@dstt[i].soghe</div>
+                            }
+                            else
+                            {
+                                <div class="ghe-dachon">@dstt[i].soghe</div>
+                            }
+                        }*@
+                    </div>
+                </div>
+            </div>
+            <div class="tang-2 sodo-ghe">
+                <p class="ghe-head">Tầng 2</p>
+                <div class="ghe-container">
+                    <div class="ghe-item b-item1" id="B01">B01</div>
+                    <div class="ghe-item b-item2" id="B02">B02</div>
+                    <div class="ghe-item b-item3" id="B03">B03</div>
+                    <div class="ghe-item b-item4" id="B04">B04</div>
+                    <div class="ghe-item b-item5" id="B05">B05</div>
+                    <div class="ghe-item b-item6" id="B06">B06</div>
+                    <div class="ghe-item b-item7" id="B07">B07</div>
+                    <div class="ghe-item b-item8" id="B08">B08</div>
+                    <div class="ghe-item b-item9" id="B09">B09</div>
+                    <div class="ghe-item b-item10" id="B10">B10</div>
+                    <div class="ghe-item b-item11" id="B11">B11</div>
+                    <div class="ghe-item b-item12" id="B12">B12</div>
+                    <div class="ghe-item b-item13" id="B13">B13</div>
+                    <div class="ghe-item b-item14" id="B14">B14</div>
+                    <div class="ghe-item b-item15" id="B15">B15</div>
+                    @*@for (int i = 22; i < 37; i++)
+                    {
+                        if (dstt[i].trangthai == 0)
+                        {
+                            <div class="ghe-item">@dstt[i].soghe</div>
+                        }
+                        else
+                        {
+                            <div class="ghe-dachon">@dstt[i].soghe</div>
+                        }
+                    }*@
+                    <div class="mini-container">
+                        <div class="ghe-item b-item16">B16</div>
+                        <div class="ghe-item b-item17">B17</div>
+                        @*@for (int i = 37; i < 39; i++)
+                        {
+                            if (dstt[i].trangthai == 0)
+                            {
+                                <div class="ghe-item">@dstt[i].soghe</div>
+                            }
+                            else
+                            {
+                                <div class="ghe-dachon">@dstt[i].soghe</div>
+                            }
+                        }*@
+                    </div>
+                    <div class="mini-container mini-container-bt">
+                        <div class="ghe-item-bt ghe-item b-item18" id="B18">B18</div>
+                        <div class="ghe-item-bt ghe-item b-item19" id="B19">B19</div>
+                        <div class="ghe-item-bt ghe-item b-item20" id="B20">B20</div>
+                        <div class="ghe-item-bt ghe-item b-item21" id="B21">B21</div>
+                        <div class="ghe-item-bt ghe-item b-item22" id="B22">B22</div>
+                        @*@for (int i = 39; i < 44; i++)
+                        {
+                            if (dstt[i].trangthai == 0)
+                            {
+                                <div class="ghe-item">@dstt[i].soghe</div>
+                            }
+                            else
+                            {
+                                <div class="ghe-dachon">@dstt[i].soghe</div>
+                            }
+                        }*@
+                    </div>
+                </div>
+            </div>
+            <div class="mota-trangthai">
+                <div class="trangthai-ghe">
+                    <p class="trong"></p>Trống
+                </div>
+                <div class="trangthai-ghe">
+                    <p class="dangchon"></p>Đang chọn
+                </div>
+                <div class="trangthai-ghe">
+                    <p class="dadat"></p>Đã đặt
+                </div>
+            </div>
+            <div class="ghedachon">
+                <p class="soluong-ghe">Ghế đã chọn: <span class="soluong-g">3</span></p>
+                <div class="tenghe-dachon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+<div class="next-pre">
+    <div class="pre"><a href="@Url.Action("datve1")"><i class="fas fa-chevron-left"></i> Quay lại</a></div>
+    <div class="next"><a href="@Url.Action("datve3")">Tiếp tục <i class="fas fa-chevron-right"></i></a></div>
+</div>
+</div>
+
+</section>
+<script>
+    var lineStep = document.querySelector('.step-1');
+    var numberStep = document.querySelector('.step-num2 span');
+    lineStep.style.backgroundColor = 'var(--special-font-color)';
+    numberStep.style.backgroundColor = 'var(--special-font-color)';
+</script>

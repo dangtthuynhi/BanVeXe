@@ -1,0 +1,408 @@
+/* Global styles */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-font: 'Montserrat', sans-serif;
+    --mission-font: 'Herr Von Muellerhoff', cursive;
+    --body-font-color: #333;
+    --special-font-color: #00cdce;
+    --secondary-font-color: #c59d5f;
+    --light-background-color: rgb(245, 245, 245);
+    --secondary-background-color: rgb(246, 242, 215);
+    --btn-color-default: #fce761;
+    --btn-color-hover: #383838;
+}
+
+html{
+    font-family: var(--main-font);
+    font-size: 10px;
+    color: var(--body-font-color);
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+ul{
+    list-style: none;
+}
+
+.main-container{
+    width: 100%;
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 1rem 2.4rem;
+}
+
+/* Header */
+.header{
+    background-color: rgba(25, 25, 25, 0.8);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo{
+    background-color: #cedde2;
+    width: 12rem;
+    border-radius: 1rem;
+}
+
+.head-nav{
+    position: relative;
+}
+
+.logo-content{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+}
+
+.logo-content > span{
+    color: var(--special-font-color);
+}
+
+.nav-list{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    right: 0;
+}
+
+.nav-link{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    padding-bottom: .8rem;
+    position: relative;
+    transition: color .3s;
+}
+
+.nav-link::before{
+    content: '';
+    height: .15rem;
+    background-color:rgba(25, 25, 25, 0);
+    width: 6rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color .3s;
+}
+
+.nav-link:hover::before{
+    background-color: var(--special-font-color);
+}
+
+.nav-link:hover{
+    color: var(--special-font-color);
+}
+
+/* Form contact */
+
+.contact{
+    background-image: linear-gradient(to bottom, rgba(0, 205, 206, .2), rgba(0, 0, 0, .7) 60%), url('../img/streetct.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 150vh;
+}
+
+.contact-support{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.introduce{
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10rem;
+    padding: 0 20rem;
+    text-shadow: 0 0 5px #000;
+}
+
+.introduce h1{
+    font-size: 4rem;
+    margin: 3rem 0;
+    font-weight: 500;
+}
+
+.introduce p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+.control-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem 0;
+}
+
+.main-contact{
+    width: 48%;
+    background-color: #ffffff;
+}
+
+.main-contact h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: left;
+    padding: 3rem 4.2rem 4rem;
+}
+
+.i-form{
+    display: block;
+    width: 85%;
+    height: 4rem;
+    font-size: 1.8rem;
+    margin: 0 auto 5rem;
+    border: none;
+    border-bottom: .25rem solid rgba(0, 0, 0, .7);
+    background-color: var(--light-background-color);
+    padding-left: 1rem;
+}
+
+.i-form:focus,.area-t:focus{
+    outline: none;
+}
+
+.area-t{
+    padding-left: 1rem;
+    padding-top: 1rem;
+    resize: none;
+    height: 12rem;
+    min-height: 4rem;
+    display: block;
+    width: 85%;
+    font-size: 1.8rem;
+    margin: 0 auto 5rem;
+    background-color: var(--light-background-color);
+    border: none;
+    border-bottom: .25rem solid rgba(0, 0, 0, .7);
+}
+
+.main-contact button{
+    display: inline-block;
+    padding: 1.5rem 5rem;
+    border: none;
+    background-color: var(--special-font-color);
+    margin: 1rem 4.2rem 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.maim-cotact button:focus{
+    outline: none;
+}
+
+.main-contact button:hover{
+    background-color: var(--body-font-color);
+    color: #ffffff;
+}
+
+.item-info > i{
+    display: block;
+    background-color: #ffffff;
+    color: #000;
+    width: 7rem;
+    height: 7rem;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 7rem;
+    border-radius: 50%;
+}
+
+.text-next > h4{
+    color: var(--special-font-color);
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.text-next > p{
+    color: #ffffff;
+}
+
+.text-next{
+    width: 45%;
+    margin-left: 2.5rem;
+}
+
+.item-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+/* footer */
+
+footer{
+    background-color: #000;
+}
+
+.ft-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ft-head{
+    color: var(--special-font-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.c-about > p{
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.list-connect{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.connect-item a{
+    display: block;
+}
+
+.connect-item i{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: .2rem solid #ffffff;
+    font-size: 2rem;
+    color: #ffffff;
+    line-height: 4rem;
+    text-align: center;
+    transition: .3s;
+}
+
+.connect-item i:hover{
+    color: var(--special-font-color);
+    border-color: var(--special-font-color);
+}
+
+.ft-component{
+    height: 35rem;
+    width: 23%;
+    padding: 1rem 1rem;
+}
+
+
+.c-time > p{
+    font-weight: 400;
+    color: #ffffff;
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+    border-bottom: .1rem dashed #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-time .monday{
+    padding-top: 0 !important;
+}
+
+.c-docs > a{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    color: #ffffff;
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+    font-size: 1.6rem;border-bottom: .1rem dashed transparent;
+    transition: .3s;
+}
+
+.c-docs .c-afirst{
+    padding-top: 0rem !important;
+}
+
+.c-docs i{
+    font-size: 1.8rem;
+}
+
+.c-docs > a:hover{
+    color: var(--special-font-color);
+}
+
+.c-team > p{
+    font-weight: 400;
+    color: #ffffff;
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+    border-bottom: .1rem dashed #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-team .monday{
+    padding-top: 0 !important;
+}
+
+.end-footer{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--special-font-color);
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.bttop{
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+}
+
+.bttop i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 4.5rem;
+    color: var(--special-font-color);
+}

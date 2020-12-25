@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "datve3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section sScript{
+    <script src="~/resources/js/quytrinh_datvexe.js"></script>
+    <script src="~/resources/js/datvexe.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+@section sCss{
+    <link rel="stylesheet" href="~/resources/css/datvexe.css">
+}
+    <section class="datvexe" id="uptoall">
+        <div class="main-container">
+            <div class="datvexe-header">
+                <h1>Du lịch cùng Penguins</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel facere a at expedita autem ratione
+                    repellat non porro dolores rerum dicta, totam libero commodi atque veniam unde voluptate corrupti
+                    itaque!
+                </p>
+            </div>
+            <div class="booking-steps">
+                <div class="line">
+                    <div class="step-componant step-1"></div>
+                    <div class="step-componant step-2"></div>
+                    <div class="step-componant step-3"></div>
+                </div>
+                <div class="step">
+                    <p class="step-number step-num1"><span>1</span></p>
+                    <p class="step-number step-num2"><span>2</span></p>
+                    <p class="step-number step-num3"><span>3</span></p>
+                    <p class="step-number step-num4"><span>4</span></p>
+                </div>
+            </div>
+
+
+            <div class="third-datvexe">
+                <div class="thongtin-kh">
+                    <p class="s-head ttkh-head">Thông tin khách hàng</p>
+                    <div class="hoten-kh">
+                        <p class="s-lable">Họ tên khách hàng</p>
+                        <input type="text" class="kh-input third-input">
+                    </div>
+                    <div class="sdt-kh">
+                        <p class="s-lable">Số điện thoại</p>
+                        <input type="text" class="sdt-input third-input">
+                    </div>
+                    <div class="email-kh">
+                        <p class="s-lable">Email</p>
+                        <input type="text" class="email-input third-input">
+                    </div>
+                    <div class="tinh-thanh">
+                        <div class="tinhtp-kh">
+                            <p class="s-lable">Tỉnh/TP</p>
+                            <!-- <input type="text" class="tinhtp-input third-input"> -->
+                            <select name="tinh-thanh" id="" class="tinhtp-input third-input">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </div>
+                        <div class="quanh-kh">
+                            <p class="s-lable">Quận/Huyện</p>
+                            <!-- <input type="text" class="quanh-input third-input"> -->
+                            <select name="quan-huyen" id="" class="quanh-input third-input">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="accept">
+                        <input type="checkbox" class="accept-requied">
+                        <p>Chấp nhận <span class="ticket-rule">điều khoản đặt vé</span> của penguins</p>
+                    </div>
+                </div>
+                <div class="dieukhoan-luuy">
+                    <p class="s-head ttkh-head">Điều khoản & lưu ý</p>
+                    <p class="our-prule">
+                        ( 1 ) * Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi qui facere illum
+                        sequi, odit, libero velit ad dicta voluptate tempore optio aut vel cumque tempora placeat
+                        reiciendis, accusantium neque. Neque.
+                    </p>
+                    <p class="our-prule">
+                        ( 2 ) * Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi qui facere illum
+                        sequi, odit, libero velit ad dicta voluptate tempore optio aut vel cumque tempora.
+                    </p>
+                    <p class="our-prule">
+                        ( 3 ) * Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi qui facere illum
+                        sequi, odit, libero velit ad dicta voluptate tempore optio aut vel cumque tempora placeat
+                        reiciendis, accusantium neque. Neque.
+                    </p>
+                    <p class="our-prule">
+                        ( 4 ) * Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi qui facere illum
+                        sequi, odit, libero velit ad dicta voluptate tempore optio aut vel cumque tempora placeat.
+                    </p>
+                </div>
+            </div>
+
+            <div class="next-pre">
+                <div class="pre"><a href="@Url.Action("datve2")"><i class="fas fa-chevron-left"></i> Quay lại</a></div>
+                <div class="next"><a href="@Url.Action("datve4")">Tiếp tục <i class="fas fa-chevron-right"></i></a></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var lineStep = document.querySelector('.step-1');
+            var numberStep = document.querySelector('.step-num2 span');
+            lineStep.style.backgroundColor = 'var(--special-font-color)';
+            numberStep.style.backgroundColor = 'var(--special-font-color)';
+        var lineStep = document.querySelector('.step-2');
+    var numberStep = document.querySelector('.step-num3 span');
+    lineStep.style.backgroundColor = 'var(--special-font-color)';
+    numberStep.style.backgroundColor = 'var(--special-font-color)';
+</script>

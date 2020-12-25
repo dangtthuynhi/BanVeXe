@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "BoSungView";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section sCss
+{
+    <link rel="stylesheet" href="~/resources/css/datvexe.css">
+}
+@section sScript{
+    <script src="~/resources/js/quytrinh_datvexe.js"></script>
+    <script src="~/resources/js/datvexe.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+<section class="datvexe" id="uptoall">
+    <div class="main-container">
+        <div class="tracuu-ve">
+            <h2 class="tcv-done">Tra cứu vé của bạn</h2>
+            <div class="nhap-ttve">
+                @using (Html.BeginForm("traCuuVeView", "TraCuuVe", FormMethod.Post))
+                {
+                    <p>
+                        <label for="nhapmv">Nhập mã vé</label>
+                        @Html.TextBox("SearchString",null,new{@class="nhap-mv",@id="nhapmv"})
+                        <input type="submit" class="tim-kiem-btn" value="Tìm kiếm"/>
+                    </p>
+                }
+            </div>
+        </div>
+    </div>
+</section>

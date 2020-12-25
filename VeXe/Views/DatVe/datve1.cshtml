@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "datve1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sScript{
+    <script src="~/resources/js/quytrinh_datvexe.js"></script>
+    <script src="~/resources/js/datvexe.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+@section sCss{
+    <link rel="stylesheet" href="~/resources/css/datvexe.css">
+}
+@model VeXe.Models.lichtrinh
+<section class="datvexe" id="uptoall">
+    <div class="main-container">
+        <div class="datvexe-header">
+            <h1>Du lịch cùng Penguins</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel facere a at expedita autem ratione
+                repellat non porro dolores rerum dicta, totam libero commodi atque veniam unde voluptate corrupti
+                itaque!
+            </p>
+        </div>
+        <div class="booking-steps">
+            <div class="line">
+                <div class="step-componant step-1"></div>
+                <div class="step-componant step-2"></div>
+                <div class="step-componant step-3"></div>
+            </div>
+            <div class="step">
+                <p class="step-number step-num1"><span>1</span></p>
+                <p class="step-number step-num2"><span>2</span></p>
+                <p class="step-number step-num3"><span>3</span></p>
+                <p class="step-number step-num4"><span>4</span></p>
+            </div>
+        </div>
+
+        <div class="first-datvexe">
+            <div class="input-radio">
+                <div class="dico-vekhong">
+                    <input type="radio" id="khong-hoi" name="divekhong" value="1">
+                    <label for="khong-hoi">Một chiều</label>
+                </div>
+            </div>
+            <div class="fist-booking diem-di">
+                <label class="lable-b-info" for="choose-diemdi">Điểm đi</label>
+                <input class="booking-info" id="choose-diemdi" type="text" placeholder="Điểm xuất phát..."
+                       value="@Model.tuyendetails.noibatdau">
+                <i class="fa fa-exchange-alt"></i>
+            </div>
+            <div class="fist-booking diem-den">
+                <label class="lable-b-info" for="choose-diemden">Điểm đến</label>
+                <input class="booking-info" id="choose-diemden" type="text" placeholder="Điểm xuất phát..."
+                       value="@Model.tuyendetails.noiketthuc">
+            </div>
+            <div class="fist-booking date-go">
+                <div class="ngay-di">
+                    <label class="lable-b-info" for="choose-ngaydi">Ngày đi</label>
+                    <input class="booking-info" id="choose-ngaydi" value=@DateTime.Parse(Model.lotrinhdetails.thoigian.ToString()).ToString("d")>
+                </div>
+                <div class="ngay-ve">
+                    <label class="lable-b-info" for="choose-ngayve">Ngày về</label>
+                    <input class="booking-info" id="choose-ngayve" value=@DateTime.Parse(Model.lotrinhdetails.thoigian.ToString()).ToString("d")>
+                </div>
+            </div>
+            <button class="search-vexe">
+                <i class="fa fa-search"></i> tìm chuyến xe
+            </button>
+        </div>
+        <div class="next-pre">
+            <div class="pre"><i class="fas fa-chevron-left"></i> Quay lại</div>
+            <div class="next"><a href="@Url.Action("datve2")">Tiếp tục <i class="fas fa-chevron-right"></i></a></div>
+
+        </div>
+    </div>
+</section>

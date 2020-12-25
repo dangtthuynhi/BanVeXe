@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "contact";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sScript{
+    <script src="~/resources/js/contact.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+@section sCss{
+    <link rel="stylesheet" href="~/resources/css/contact.css">
+
+}
+
+
+    <!-- Form contact -->
+    <section class="contact">
+        <div class="main-container contact-support" id="uptoall">
+            <div class="introduce">
+                <h1>Contact Us - Penguins</h1>
+                <p class="contact-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat magni
+                    cumque, sed voluptatibus culpa repudiandae optio illo accusamus. Beatae nemo maiores recusandae
+                    perspiciatis excepturi facere! Quidem quos doloribus asperiores.
+                </p>
+            </div>
+            <div class="control-form">
+                <div class="a-address">
+                    <div class="item-info">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <div class="text-next">
+                            <h4>Address</h4>
+                            <p class="info-note">
+                                Trường Đại Học Công Nghệ Thông Tin - Univercity of Information
+                                Technology
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="item-info">
+                        <i class="fa fa-phone"></i>
+                        <div class="text-next">
+                            <h4>Phone</h4>
+                            <p class="info-note">+84 0123 7789 685</p>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <i class="fa fa-envelope"></i>
+                        <div class="text-next">
+                            <h4>Email</h4>
+                            <p class="info-note">xx52xxxx@gm.uit.edu.vn</p>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <i class="fa fa-globe-americas"></i>
+                        <div class="text-next">
+                            <h4>Country</h4>
+                            <p class="info-note">Việt Nam</p>
+                        </div>
+                    </div>
+                </div>
+                <form action="" class="main-contact">
+                    <h2>Send Message</h2>
+                    <input class="i-form" type="text" placeholder="Full Name">
+                    <input class="i-form" type="text" placeholder="Email">
+                    <textarea class="area-t" placeholder="Type your Message..."></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contact form ends -->
+

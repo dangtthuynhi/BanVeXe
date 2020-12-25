@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="vexe" Class="vexeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\vexe.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="vexeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Ghe" Member="Ghes">
+    <Type Name="Ghe">
+      <Column Name="maghe" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="soghe" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="maxe" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Association Name="Ghe_Ve" Member="Ves" ThisKey="maghe" OtherKey="maghe" Type="Ve" />
+      <Association Name="Xe_Ghe" Member="Xe" ThisKey="maxe" OtherKey="maxe" Type="Xe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Khachhang" Member="Khachhangs">
+    <Type Name="Khachhang">
+      <Column Name="makh" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenkh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Association Name="Khachhang_Ve" Member="Ves" ThisKey="makh" OtherKey="makh" Type="Ve" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lotrinh" Member="Lotrinhs">
+    <Type Name="Lotrinh">
+      <Column Name="malotrinh" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="maxe" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="matuyen" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="thoigian" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="gia" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Lotrinh_Ve" Member="Ves" ThisKey="malotrinh" OtherKey="malotrinh" Type="Ve" />
+      <Association Name="Tuyen_Lotrinh" Member="Tuyen" ThisKey="matuyen" OtherKey="matuyen" Type="Tuyen" IsForeignKey="true" />
+      <Association Name="Xe_Lotrinh" Member="Xe" ThisKey="maxe" OtherKey="maxe" Type="Xe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tuyen" Member="Tuyens">
+    <Type Name="Tuyen">
+      <Column Name="matuyen" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="noibatdau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noiketthuc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Tuyen_Lotrinh" Member="Lotrinhs" ThisKey="matuyen" OtherKey="matuyen" Type="Lotrinh" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ve" Member="Ves">
+    <Type Name="Ve">
+      <Column Name="mave" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="maghe" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="malotrinh" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="makh" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Association Name="Ghe_Ve" Member="Ghe" ThisKey="maghe" OtherKey="maghe" Type="Ghe" IsForeignKey="true" />
+      <Association Name="Khachhang_Ve" Member="Khachhang" ThisKey="makh" OtherKey="makh" Type="Khachhang" IsForeignKey="true" />
+      <Association Name="Lotrinh_Ve" Member="Lotrinh" ThisKey="malotrinh" OtherKey="malotrinh" Type="Lotrinh" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Xe" Member="Xes">
+    <Type Name="Xe">
+      <Column Name="maxe" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="bienso" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Xe_Ghe" Member="Ghes" ThisKey="maxe" OtherKey="maxe" Type="Ghe" />
+      <Association Name="Xe_Lotrinh" Member="Lotrinhs" ThisKey="maxe" OtherKey="maxe" Type="Lotrinh" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Taikhoan" Member="Taikhoans">
+    <Type Name="Taikhoan">
+      <Column Name="tendangnhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="matkhau" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

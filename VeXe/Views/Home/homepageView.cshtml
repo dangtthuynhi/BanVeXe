@@ -1,0 +1,1338 @@
+﻿
+@{
+    ViewBag.Title = "homepage";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+
+    <!-- BS4 -->
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="~/resources/css/homepage.css">
+    <link rel="stylesheet" href="~/resources/css/responsive_homepage.css">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Lato&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <!-- FONT AWSOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!-- JQUERY CDN + COUNTER UP -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="~/vendors/js/jquery.countup.js"></script>
+
+</head>
+
+<body>
+    <section class="all_page">
+
+
+        <!-- HEADING -->
+        <section class="heading fullwp" id="header_home">
+            <div class="navbars_iconout">
+                <div class="navbars_icon">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="container_center">
+                <div class="top_head">
+
+                    <div class="logo">
+
+                        <a href="@Url.Action("indexView","Index")">
+                            <img src="~/resources/img/homeBUS.png" alt="logo">
+                        </a>
+
+                    </div>
+                    <p>Pengu<span>ins</span></p>
+                    <div class="icon_login">
+                        <a href="#">
+                            <img src="~/resources/img/facebook.png" alt="facebook">
+                        </a>
+
+                        <a href="#">
+                            <img src="~/resources/img/gmail.png" alt="gamil">
+                        </a>
+
+                        <a href="#">
+                            <img src="~/resources/img/vietnam.png" alt="language">
+                        </a>
+
+                        <a href="@Url.Action("login","Login")" id="last_icon">Đăng nhập</a>
+                    </div>
+
+                </div>
+
+                <ul class="container_menu">
+                    <li><a href="#" data-hover="trang chủ"><span><i class="fas fa-home"></i>trang chủ</span></a></li>
+                    <li><a href="@Url.Action("loTrinhView","LoTrinh")" data-hover="lịch trình"><span><i class="fas fa-home"></i>lịch trình</span></a></li>
+                    <li><a href="@Url.Action("newsView","News")" data-hover="tin tức"><span><i class="fas fa-home"></i>tin tức</span></a></li>
+                    <li><a href="@Url.Action("lienHeView","LienHe")" data-hover="liên hệ"><span><i class="fas fa-home"></i>liên hệ</span></a></li>
+                    <li><a href="@Url.Action("BoSungView","TraCuuVe")" data-hover="hóa đơn"><span><i class="fas fa-home"></i>tra cứu vé</span></a></li>
+                    <li><a href="#" data-hover="về chúng tôi"><span><i class="fas fa-home"></i>về chúng tôi</span></a></li>
+                    <li class="drop-menu">
+                        <a href="#" data-hover="khác"><span><i class="fas fa-home"></i>khác</span> <i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="datvexe.cshtml">new page 1</a></li>
+                            <li><a href="#">new page 2</a></li>
+                            <li><a href="#">new page 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAROUSEL -->
+        <section class="home_carousel fullwp" id="backtotop">
+
+            <div id="carouselExampleFade" class="carousel slide carousel-fade w-100 h-100" data-ride="carousel">
+                <ol class="carousel-indicators container">
+                    <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleFade" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleFade" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleFade" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner w-100 h-100">
+                    <div class="carousel-item  active w-100 h-100 main_carousel">
+                        <div class="carousel_overray"></div>
+                        <div class="textin_carousel">
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, iste.</p>
+                        </div>
+
+                        <img class="d-inline-block w-100 h-100" src="~/resources/img/Bus1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item w-100 h-100 main_carousel">
+                        <div class="carousel_overray"></div>
+                        <div class="textin_carousel">
+                            <h3>Heading random</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, iste.</p>
+                        </div>
+
+                        <img class="d-inline-block w-100 h-100" src="~/resources/img/bus2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item w-100 h-100 main_carousel">
+                        <div class="carousel_overray"></div>
+                        <div class="textin_carousel">
+                            <h3>Somthing about...</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, iste.</p>
+                        </div>
+
+                        <img class="d-inline-block w-100 h-100" src="~/resources/img/bus3.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item w-100 h-100 main_carousel">
+                        <div class="carousel_overray"></div>
+                        <div class="textin_carousel">
+                            <h3>Another text node</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, iste.</p>
+                        </div>
+                        <img class="d-inline-block w-100 h-100" src="~/resources/img/bus4.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev next_back" href="#carouselExampleFade" role="button" data-slide="prev">
+                    <span class="arrow_carousel" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+
+                </a>
+                <a class="carousel-control-next next_back" href="#carouselExampleFade" role="button" data-slide="next">
+                    <span class="arrow_carousel" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+
+                </a>
+            </div>
+
+
+        </section>
+
+
+        <!-- BOOKING -->
+        <section class="booking fullwp">
+
+            <div class="booking_con container_center" id="container_bk">
+                <h2 class="center_header">đặt vé trực tuyến</h2>
+                <div class="booking_componant">
+                    <p class="raido-i">
+                        <input type="radio" name="haichieu" value="1" id="khong-hoi" checked>
+                        <label for="khong-hoi">Một chiều</label>
+                        <input type="radio" name="haichieu" value="2" id="co-hoi">
+                        <label for="co-hoi">Khứ hồi</label>
+                    </p>
+                    <div class="start_bk line_go">
+                        <p>Điểm đi</p>
+                        <input type="text" placeholder="Điểm xuất phát..." value="TP Hồ Chí Minh">
+                    </div>
+                    <div class="swap_icon">
+                        <i class="fa fa-exchange-alt"></i>
+                    </div>
+                    <div class="end_bk line_go">
+                        <p>Điểm đến</p>
+                        <input type="text" placeholder="Điểm đến..." value="Hà Nội">
+                    </div>
+                    <div class="set_day">
+                        <div class="day_go day_to_go">
+                            <p>Ngày đi</p>
+                            <input class="daytogo" id="today" type="date">
+                        </div>
+                        <div class="day_back day_to_go">
+                            <p>Ngày về</p>
+                            <input class="daytogo" id="tomorrow" type="date">
+                        </div>
+                    </div>
+                    <div class="looking_for">
+                        <a href="#"><i class="fa fa-search"></i> TÌM CHUYẾN XE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- GỢI Ý CHUYẾN PHỔ BIẾN-->
+        <section class="sugges fullwp">
+            <div class="sugges_con">
+                <h2 class="center_header sugges_header">Tuyến phổ biến</h2>
+
+                <div class="sugges_grid">
+                    <div class="sugges_items">
+                        <div class="sugges_img">
+                            <img src="~/resources/img/Đà nẵng.png" alt="">
+                        </div>
+
+                        <div class="sugges_info">
+
+                            <div class="sugges_in">
+                                <div class="info_togo">
+                                    <p class="tu_a">Hồ Chí Minh</p>
+                                    <span class="icon_den"><i class="fa fa-chevron-right"></i></span>
+                                    <p class="den_b">Đà Nẵng</p>
+                                </div>
+
+
+                                <div class="infomation_bus">
+                                    <div class="info_cost">
+                                        <p class="tu_a">Quãng đường</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-map-marker-alt"></i>
+                                            </span>xxxkm
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Thời gian</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den"><i class="fa fa-clock"></i></span>XhYp
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Giá tiền</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-money-bill-wave"></i>
+                                            </span>xxx.yyyđ
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="choose_onebtn">
+                                    <a href="#">Mua vé</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sugges_items">
+                        <div class="sugges_img">
+                            <img src="~/resources/img/nhatrang.jpg" alt="">
+                        </div>
+
+                        <div class="sugges_info">
+
+                            <div class="sugges_in">
+                                <div class="info_togo">
+                                    <p class="tu_a">Hồ Chí Minh</p>
+                                    <p class="icon_den"><i class="fa fa-chevron-right"></i></p>
+                                    <p class="den_b">Nha Trang</p>
+                                </div>
+
+                                <div class="infomation_bus">
+                                    <div class="info_cost">
+                                        <p class="tu_a">Quãng đường</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-map-marker-alt"></i>
+                                            </span>xxxkm
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Thời gian</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den"><i class="fa fa-clock"></i></span>XhYp
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Giá tiền</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-money-bill-wave"></i>
+                                            </span>xxx.yyyđ
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="choose_onebtn">
+                                    <a href="#">Mua vé</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sugges_items">
+                        <div class="sugges_img">
+                            <img src="~/resources/img/dalat.jpg" alt="">
+                        </div>
+
+                        <div class="sugges_info">
+
+                            <div class="sugges_in">
+                                <div class="info_togo">
+                                    <p class="tu_a">Hồ Chí Minh</p>
+                                    <span class="icon_den"><i class="fa fa-chevron-right"></i></span>
+                                    <p class="den_b">Đà Lạt</p>
+                                </div>
+
+                                <div class="infomation_bus">
+                                    <div class="info_cost">
+                                        <p class="tu_a">Quãng đường</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-map-marker-alt"></i>
+                                            </span>xxxkm
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Thời gian</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den"><i class="fa fa-clock"></i></span>XhYp
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Giá tiền</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-money-bill-wave"></i>
+                                            </span>xxx.yyyđ
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="choose_onebtn">
+                                    <a href="#">Mua vé</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sugges_items">
+                        <div class="sugges_img">
+                            <img src="~/resources/img/halong.jpg" alt="">
+                        </div>
+
+                        <div class="sugges_info">
+
+                            <div class="sugges_in">
+                                <div class="info_togo">
+                                    <p class="tu_a">Hồ Chí Minh</p>
+                                    <span class="icon_den"><i class="fa fa-chevron-right"></i></span>
+                                    <p class="den_b">Hạ Long</p>
+                                </div>
+
+                                <div class="infomation_bus">
+                                    <div class="info_cost">
+                                        <p class="tu_a">Quãng đường</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-map-marker-alt"></i>
+                                            </span>xxxkm
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Thời gian</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den"><i class="fa fa-clock"></i></span>XhYp
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Giá tiền</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-money-bill-wave"></i>
+                                            </span>xxx.yyyđ
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="choose_onebtn">
+                                    <a href="#">Mua vé</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sugges_items">
+                        <div class="sugges_img">
+                            <img src="~/resources/img/HANOI.png" alt="">
+                        </div>
+
+                        <div class="sugges_info">
+
+                            <div class="sugges_in">
+                                <div class="info_togo">
+                                    <p class="tu_a">Hồ Chí Minh</p>
+                                    <span class="icon_den"><i class="fa fa-chevron-right"></i></span>
+                                    <p class="den_b">Hà Nội</p>
+                                </div>
+
+                                <div class="infomation_bus">
+                                    <div class="info_cost">
+                                        <p class="tu_a">Quãng đường</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-map-marker-alt"></i>
+                                            </span>xxxkm
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Thời gian</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den"><i class="fa fa-clock"></i></span>XhYp
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Giá tiền</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-money-bill-wave"></i>
+                                            </span>xxx.yyyđ
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="choose_onebtn">
+                                    <a href="#">Mua vé</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sugges_items">
+                        <div class="sugges_img">
+                            <img src="~/resources/img/NTS.png" alt="">
+                        </div>
+
+                        <div class="sugges_info">
+
+                            <div class="sugges_in">
+                                <div class="info_togo">
+                                    <p class="tu_a">Hồ Chí Minh</p>
+                                    <span class="icon_den"><i class="fa fa-chevron-right"></i></span>
+                                    <p class="den_b">Phú Yên</p>
+                                </div>
+
+                                <div class="infomation_bus">
+                                    <div class="info_cost">
+                                        <p class="tu_a">Quãng đường</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-map-marker-alt"></i>
+                                            </span>xxxkm
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Thời gian</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den"><i class="fa fa-clock"></i></span>XhYp
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Giá tiền</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-money-bill-wave"></i>
+                                            </span>xxx.yyyđ
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="choose_onebtn">
+                                    <a href="#">Mua vé</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sugges_items">
+                        <div class="sugges_img">
+                            <img src="~/resources/img/Vũng tàu.png" alt="">
+                        </div>
+
+                        <div class="sugges_info">
+
+                            <div class="sugges_in">
+                                <div class="info_togo">
+                                    <p class="tu_a">Hồ Chí Minh</p>
+                                    <span class="icon_den"><i class="fa fa-chevron-right"></i></span>
+                                    <p class="den_b">Vũng Tàu</p>
+                                </div>
+
+                                <div class="infomation_bus">
+                                    <div class="info_cost">
+                                        <p class="tu_a">Quãng đường</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-map-marker-alt"></i>
+                                            </span>xxxkm
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Thời gian</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den"><i class="fa fa-clock"></i></span>XhYp
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Giá tiền</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-money-bill-wave"></i>
+                                            </span>xxx.yyyđ
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="choose_onebtn">
+                                    <a href="#">Mua vé</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sugges_items">
+                        <div class="sugges_img">
+                            <img src="~/resources/img/landmark81.jpg" alt="">
+                        </div>
+
+                        <div class="sugges_info">
+
+                            <div class="sugges_in">
+                                <div class="info_togo">
+                                    <p class="tu_a">Hồ Chí Minh</p>
+                                    <span class="icon_den"><i class="fa fa-chevron-right"></i></span>
+                                    <p class="den_b">Hết tiền</p>
+                                </div>
+
+                                <div class="infomation_bus">
+                                    <div class="info_cost">
+                                        <p class="tu_a">Quãng đường</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-map-marker-alt"></i>
+                                            </span>xxxkm
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Thời gian</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den"><i class="fa fa-clock"></i></span>XhYp
+                                        </p>
+                                    </div>
+
+                                    <div class="info_cost">
+                                        <p class="tu_a">Giá tiền</p>
+
+                                        <p class="den_b">
+                                            <span class="icon_den">
+                                                <i class="fa fa-money-bill-wave"></i>
+                                            </span>xxx.yyyđ
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="choose_onebtn">
+                                    <a href="#">Mua vé</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="save_kc"></section>
+
+
+        <!-- COUNTING -->
+        <section class="count_info fullwp">
+            <div class="intro_head">
+                <h2 class="center_header just_little">
+                    Penguins - Giới thiệu
+                </h2>
+            </div>
+
+            <div class="container_center flex_counting" id="container_count">
+                <div class="flex_item">
+                    <div class="icon_count">
+                        <i class="fa fa-bus-alt"></i>
+                    </div>
+                    <div class="num">
+                        <p class="count_number">1600</p>
+                        <h3>Penguin - 1k6</h3>
+                        <p>Chúng tôi phục vụ hơn 1,600 chuyến xe đường dài và liên tỉnh mỗi ngày</p>
+                    </div>
+
+                </div>
+
+                <div class="flex_item">
+                    <div class="icon_count">
+                        <i class="fa fa-bus-alt"></i>
+                    </div>
+                    <div class="num">
+                        <p class="count_number">1600</p>
+                        <h3>Penguin - 1k6</h3>
+                        <p>Chúng tôi phục vụ hơn 1,600 chuyến xe đường dài và liên tỉnh mỗi ngày</p>
+                    </div>
+                </div>
+
+                <div class="flex_item">
+                    <div class="icon_count">
+                        <i class="fa fa-bus-alt"></i>
+                    </div>
+                    <div class="num">
+                        <p class="count_number">1600</p>
+                        <h3>Penguin - 1k6</h3>
+                        <p>Chúng tôi phục vụ hơn 1,600 chuyến xe đường dài và liên tỉnh mỗi ngày</p>
+                    </div>
+                </div>
+
+                <div class="flex_item">
+                    <div class="icon_count">
+                        <i class="fa fa-bus-alt"></i>
+                    </div>
+                    <div class="num">
+                        <p class="count_number">1600</p>
+                        <h3>Penguin - 1k6</h3>
+                        <p>Chúng tôi phục vụ hơn 1,600 chuyến xe đường dài và liên tỉnh mỗi ngày</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- POPULAR PLACES -->
+        <section class="save_kc"></section>
+        <section class="fullwp popular_container">
+            <h2 class="center_header mini_positon">tham khảo - những địa điểm du lịch nổi tiếng</h2>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner ">
+                    <div class="carousel-item itemcr_design  active">
+                        <div class="d-flex omtron_niemtin">
+                            <div class="mini_item">
+                                <img src="~/resources/img/hoankiem_hanoi.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Hồ Hoàn Kiếm</span>
+                                    </p>
+                                    <h4>Hà Nội</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/lamdong_dalat.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Đà Lạt</span>
+                                    </p>
+                                    <h4>Lâm Đồng</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/Nhatrang_khanhhoa.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Nha Trang</span>
+                                    </p>
+                                    <h4>Khánh Hòa</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/Sapa_laocai.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Sapa</span>
+                                    </p>
+                                    <h4>Lào Cai</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/Halong_quangninh.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Vịnh Hạ Long</span>
+                                    </p>
+                                    <h4>Quảng Ninh</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item itemcr_design">
+                        <div class="d-flex omtron_niemtin">
+                            <div class="mini_item">
+                                <img src="~/resources/img/pnkg_quangbinh.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Phong Nha - Kẻ Bàng</span>
+                                    </p>
+                                    <h4>Quảng Bình</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/Coosdohue_thuathienhue.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Cố Đô Huế</span>
+                                    </p>
+                                    <h4>Thừa Thiên - Huế</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/phocohoian_quangnam.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Phố Cổ Hội An</span>
+                                    </p>
+                                    <h4>Quảng Nam</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/cautranthily_danang.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Cầu Trần Thị Lý</span>
+                                    </p>
+                                    <h4>Đà Nẵng</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/dadia_phuyen.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Gành Đá Đĩa</span>
+                                    </p>
+                                    <h4>Phú Yên</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item itemcr_design">
+                        <div class="d-flex omtron_niemtin">
+                            <div class="mini_item">
+                                <img src="~/resources/img/chonoicairang_cantho.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Chợ Nổi Cái Răng</span>
+                                    </p>
+                                    <h4>Cần Thơ</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/nhathoducba_tphcm.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Nhà Thờ Đức Bà</span>
+                                    </p>
+                                    <h4>Tp.Hồ Chí Minh</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/vqgcucphuong_ninhbinh.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Vườn QG Cúc Phương</span>
+                                    </p>
+                                    <h4>Ninh Bình</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/Lăng Bác_Hà Nội.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Lăng Bác</span>
+                                    </p>
+                                    <h4>Hà Nội</h4>
+                                </div>
+                            </div>
+                            <div class="mini_item">
+                                <img src="~/resources/img/trangan_ninhbinh.png" alt="...">
+                                <div class="place_tocome">
+                                    <p>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <span>Tràng An</span>
+                                    </p>
+                                    <h4>Ninh Bình</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="popular_arrowwww"><i class="fa fa-chevron-left"></i></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="popular_arrowwww"><i class="fa fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- OURS SERVICES -->
+        <section class="fullwp ser_con">
+            <h2 class="center_header">Dịch vụ của chúng tôi</h2>
+            <div class="services_container">
+                <div class="service_item">
+                    <i class="fa fa-globe"></i>
+                    <h4 class="service_head">Đưa Đón Tận Nhà</h4>
+                    <p class="decripstion_service">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                        autem iste modi.
+                    </p>
+                    <div class="btn_more">
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+
+                <div class="service_item">
+                    <i class="fa fa-shoe-prints"></i>
+                    <h4 class="service_head">Trạm dừng chân</h4>
+                    <p class="decripstion_service">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                        autem iste modi.
+                    </p>
+                    <div class="btn_more">
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+                <div class="service_item">
+                    <i class="fa fa-suitcase-rolling"></i>
+                    <h4 class="service_head">Vận chuyển hành lý</h4>
+                    <p class="decripstion_service">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                        autem iste modi.
+                    </p>
+                    <div class="btn_more">
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+                <div class="service_item">
+                    <i class="fa fa-camera-retro"></i>
+                    <h4 class="service_head">Du lịch cùng nhóm</h4>
+                    <p class="decripstion_service">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                        autem iste modi.
+                    </p>
+                    <div class="btn_more">
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- OUR TEAM -->
+        <section class="fullwp team_container">
+            <h2 class="center_header">Penguins team</h2>
+            <div class="pen_team">
+                <div class="team_items">
+                    <img src="~/resources/img/van.jpg" alt="">
+                    <div class="team_text">
+                        <h3>Nguyễn Thanh Vân</h3>
+                        <p>- Front-End Web Design -</p>
+                    </div>
+
+                    <div class="team_details">
+                        <div class="member_info">
+                            <h4>Nguyễn Thanh Vân</h4>
+                            <p class="po_member">- Front-End Web Design -</p>
+                            <p class="about_me">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolor.
+                            </p>
+                        </div>
+
+                        <div class="myteam_icons">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team_items">
+                    <img src="~/resources/img/penguin.jpg" alt="">
+                    <div class="team_text">
+                        <h3>Trần Như Uyển Nhi</h3>
+                        <p>- Front-End Web Design -</p>
+                    </div>
+
+                    <div class="team_details">
+                        <div class="member_info">
+                            <h4>Trần Như Uyển Nhi</h4>
+                            <p class="po_member">- Front-End Web Design -</p>
+                            <p class="about_me">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolor.
+                            </p>
+                        </div>
+
+                        <div class="myteam_icons">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team_items">
+                    <img src="~/resources/img/nhi.jpg" alt="">
+                    <div class="team_text">
+                        <h3>Đặng Thị Thùy Nhi</h3>
+                        <p>- Back-End Web Developer -</p>
+                    </div>
+
+                    <div class="team_details">
+                        <div class="member_info">
+                            <h4>Đặng Thị Thùy Nhi</h4>
+                            <p class="po_member">- Back-End Web Developer -</p>
+                            <p class="about_me">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolor.
+                            </p>
+                        </div>
+
+                        <div class="myteam_icons">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MISSION -->
+        <section class="save_kc kc_misshead bg-white">
+            <h2 class="center_header head_mission">tầm nhìn và sứ mệnh</h2>
+        </section>
+        <section class="save_kc bg-white"></section>
+
+        <section class="fullwp mission_container">
+            <div class="ours_mission">
+                <div class="first_mission miss_1">
+
+                    <div class="content_mission">
+                        <div class="inside_ctms">
+                            <h3 class="topc_head">Mission 1</h3>
+                            <i class="fas fa-asterisk"></i>
+                            <p class="text_mission">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                                deserunt architecto reprehenderit eligendi facilis quos error fugit vero unde
+                                necessitatibus
+                                facere reiciendis ex consectetur, praesentium aliquam itaque incidunt libero. Adipisci!
+                            </p>
+                            <a href="#">About Us</a>
+                        </div>
+
+                    </div>
+
+                    <img src="~/resources/img/bus_mission.jpg" alt="">
+                </div>
+
+                <div class="first_mission miss_2">
+                    <img src="~/resources/img/bus_mission.jpg" alt="">
+
+                    <div class="content_mission">
+                        <div class="inside_ctms">
+
+                            <h3 class="topc_head">Mission 2</h3>
+                            <i class="fas fa-asterisk"></i>
+                            <p class="text_mission">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                                deserunt architecto reprehenderit eligendi facilis quos error fugit vero unde
+                                necessitatibus
+                                facere reiciendis ex consectetur, praesentium aliquam itaque incidunt libero. Adipisci!
+                            </p>
+                            <a href="#">About Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first_mission miss_3">
+                    <div class="content_mission">
+                        <div class="inside_ctms">
+                            <h3 class="topc_head">Mission 3</h3>
+                            <i class="fas fa-asterisk"></i>
+                            <p class="text_mission">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                                deserunt architecto reprehenderit eligendi facilis quos error fugit vero unde
+                                necessitatibus
+                                facere reiciendis ex consectetur, praesentium aliquam itaque incidunt libero. Adipisci!
+                            </p>
+                            <a href="#">About Us</a>
+                        </div>
+
+                    </div>
+
+                    <img src="~/resources/img/bus_mission.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="save_kc bg-white"></section>
+
+
+        <!-- NEWS -->
+        <section class="fullwp news_section">
+            <h2 class="center_header news_headtop">Tin tức mới</h2>
+            <div class="news_container">
+                <div class="news_items">
+                    <div class="the_image">
+                        <img src="~/resources/img/news_test.png" alt="">
+                    </div>
+                    <div class="news_info">
+                        <div class="datemy">
+                            <span>Chủ Nhật</span>
+                            <span>Ngày 19 Tháng 10 Năm 2020</span>
+                        </div>
+                        <h3>Something about World</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sit perferendis? Similique
+                            dolorem illum odio?
+                        </p>
+
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+
+                <div class="news_items">
+                    <div class="the_image">
+                        <img src="~/resources/img/news_test.png" alt="">
+                    </div>
+                    <div class="news_info">
+                        <div class="datemy">
+                            <span>Chủ Nhật</span>
+                            <span>Ngày 19 Tháng 10 Năm 2020</span>
+                        </div>
+                        <h3>Something about World</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sit perferendis? Similique
+                            dolorem illum odio?
+                        </p>
+
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+
+                <div class="news_items">
+                    <div class="the_image">
+                        <img src="~/resources/img/news_test.png" alt="">
+                    </div>
+                    <div class="news_info">
+                        <div class="datemy">
+                            <span>Chủ Nhật</span>
+                            <span>Ngày 19 Tháng 10 Năm 2020</span>
+                        </div>
+                        <h3>Something about World</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sit perferendis? Similique
+                            dolorem illum odio?
+                        </p>
+
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+
+                <div class="news_items">
+                    <div class="the_image">
+                        <img src="~/resources/img/news_test.png" alt="">
+                    </div>
+                    <div class="news_info">
+                        <div class="datemy">
+                            <span>Chủ Nhật</span>
+                            <span>Ngày 19 Tháng 10 Năm 2020</span>
+                        </div>
+                        <h3>Something about World</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sit perferendis? Similique
+                            dolorem illum odio?
+                        </p>
+
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="more_news">
+                    <a href="#">Đọc Thêm</a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- MAP -->
+        <section class="save_kc bg-white"></section>
+        <section class="fullwp map_penguin">
+
+            <h2 class="center_header map_header">các chi nhánh</h2>
+            <section class="save_kc bg-white"></section>
+            <iframe class="my_map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2509461583463!2d106.79417681462333!3d10.868508192259046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175275fce891a67%3A0x8b0c2d3e645ac443!2zxJDhuqFpIGjhu41jIFF14buRYyBnaWEgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1603058631711!5m2!1svi!2s"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+        </section>
+        <section class="save_kc bg-white"></section>
+
+
+        <!-- FOOTER -->
+        <section class="fullwp footer_penguins">
+            <div class="center_footer">
+                <div class="one_ofthem them1">
+                    <h3>About Us</h3>
+                    <p>
+                        consectetur adipisicing elit. Fugit libero reiciendis autem at tenetur quia culpa nobis aperiam
+                        asperiores sint.
+                    </p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, aspernatur!</p>
+                    <div class="myteam_icons">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="one_ofthem them2">
+                    <h3>Working time</h3>
+                    <p class="calendar_f">
+                        <span class="the_day">Monday</span>
+                        <span class="time">5:30-23:30</span>
+                    </p>
+                    <p class="calendar_f">
+                        <span class="the_day">Tuesday</span>
+                        <span class="time">5:30-23:30</span>
+                    </p>
+                    <p class="calendar_f">
+                        <span class="the_day">Wednesday</span>
+                        <span class="time">5:30-23:30</span>
+                    </p>
+                    <p class="calendar_f">
+                        <span class="the_day">Thursday</span>
+                        <span class="time">5:30-23:30</span>
+                    </p>
+                    <p class="calendar_f">
+                        <span class="the_day">Friday</span>
+                        <span class="time">5:30-23:30</span>
+                    </p>
+                    <p class="calendar_f">
+                        <span class="the_day">Saturday</span>
+                        <span class="time">5:30-23:30</span>
+                    </p>
+                    <p class="calendar_f">
+                        <span class="the_day">Sunday</span>
+                        <span class="time">7:30-18:30</span>
+                    </p>
+                </div>
+
+                <div class="one_ofthem them3">
+                    <h3>Docs References</h3>
+
+                    <a target="_blank" href="https://futabus.vn/">
+                        <span>Vé xe Phương Trang</span>
+                    </a>
+
+                    <a target="_blank" href="https://hocwebchuan.com/">
+                        <span>Học web chuẩn</span>
+                    </a>
+                    <a target="_blank" href="https://getbootstrap.com/">
+                        <span>Boostrap 4</span>
+                        <span class="icon_docs"><i class="fab fa-bootstrap"></i></span>
+                    </a>
+
+                    <a target="_blank" href="https://fullstack.edu.vn/">
+                        <span>F8 Fullstack</span>
+                    </a>
+
+                    <a target="_blank" href="https://fonts.google.com/">
+                        <span>Google Fonts</span>
+                    </a>
+
+                    <a target="_blank" href="https://fontawesome.com/">
+                        <span>Fontawesome</span>
+                        <span class="icon_docs"><i class="fab fa-font-awesome-flag"></i></span>
+                    </a>
+
+                    <a target="_blank" href="https://www.youtube.com/channel/UCeHWTyAKBv_WnW8gsEKGECw">
+                        <span>Julio Codes</span>
+                        <span class="icon_docs"><i class="fab fa-youtube-square"></i></span>
+                    </a>
+                </div>
+
+                <div class="one_ofthem them4">
+                    <h3>Penguins Team</h3>
+                    <p class="calendar_f2">
+                        <span class="the_day">Nguyễn Thanh Vân</span>
+                        <span class="time">18521634</span>
+                    </p>
+                    <p class="calendar_f2">
+                        <span class="the_day">Trần Như Uyển Nhi</span>
+                        <span class="time">18521208</span>
+                    </p>
+                    <p class="calendar_f2">
+                        <span class="the_day">Đặng Thị Thùy Nhi</span>
+                        <span class="time">18521199</span>
+                    </p>
+                </div>
+            </div>
+            <p class="endoffooter text-center text-info pb-2 mt-2 font-weight-normal">
+                2020 - Phát triển ứng dụng Web |
+                Được thực hiện bởi Penguins Team
+            </p>
+        </section>
+
+        <!-- BACK TO TOP -->
+        <div class="bttop">
+            <a href="#backtotop"><i class="fas fa-arrow-up"></i></a>
+        </div>
+
+    </section>
+
+    <script src="~/resources/js/homepage.js"></script>
+    <script type="text/javascript">
+        $('.count_number').countUp({ delay: 10, time: 2000 });
+    </script>
+</body>
+
+</html>
+

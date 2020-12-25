@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "datve4";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sCss
+{
+    <link rel="stylesheet" href="~/resources/css/datvexe.css">
+}
+@section sScript{
+    <script src="~/resources/js/quytrinh_datvexe.js"></script>
+    <script src="~/resources/js/datvexe.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+<section class="datvexe" id="uptoall">
+    <div class="main-container">
+        <div class="datvexe-header">
+            <h1>Du lịch cùng Penguins</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel facere a at expedita autem ratione
+                repellat non porro dolores rerum dicta, totam libero commodi atque veniam unde voluptate corrupti
+                itaque!
+            </p>
+        </div>
+        <div class="booking-steps">
+            <div class="line">
+                <div class="step-componant step-1"></div>
+                <div class="step-componant step-2"></div>
+                <div class="step-componant step-3"></div>
+            </div>
+            <div class="step">
+                <p class="step-number step-num1"><span>1</span></p>
+                <p class="step-number step-num2"><span>2</span></p>
+                <p class="step-number step-num3"><span>3</span></p>
+                <p class="step-number step-num4"><span>4</span></p>
+            </div>
+        </div>
+
+        <div class="fourth-datvexe">
+            <div class="end-muave">
+                <div class="thongtin-final">
+                    <p class="s-head f-head">Thông tin mua vé</p>
+                    <h3 class="min-head">Thông tin khách hàng</h3>
+                    <div class="componant-info-kh">
+                        <div class="one-info">
+                            <p class="end-lable">Họ tên:</p>
+                            <p class="end-hoten">Nguyễn Văn A</p>
+                        </div>
+                        <div class="one-info">
+                            <p class="end-lable">Email:</p>
+                            <p class="end-email">A@gmail.com</p>
+                        </div>
+                        <div class="one-info">
+                            <p class="end-lable">Số điện thoại</p>
+                            <p class="end-sdt">0128972478218</p>
+                        </div>
+                    </div>
+                    <h3 class="min-head">Thông tin vé</h3>
+                    <div class="componant-info-kh">
+                        <div class="one-info">
+                            <p class="end-lable">Tuyến xe:</p>
+                            <p class="end-tuyenxe">TP Hồ Chí Minh => Phú Yên</p>
+                        </div>
+                        <div class="one-info">
+                            <p class="end-lable">Số lượng ghế:</p>
+                            <p class="end-slghe">1</p>
+                        </div>
+                        <div class="one-info">
+                            <p class="end-lable">Thời gian:</p>
+                            <p class="end-datetime">5:30 20/11/2020</p>
+                        </div>
+                        <div class="one-info">
+                            <p class="end-lable">Số ghế:</p>
+                            <p class="end-soghe">A01</p>
+                        </div>
+                        <div class="one-info">
+                            <p class="end-lable">Điểm lên xe:</p>
+                            <p class="end-diemlenxe">Ủy ban nhân dân xã Hòa Xuân Tây</p>
+                        </div>
+                    </div>
+                    <div class="min-tongtien">
+                        <div class="tien-ghe">
+                            <p class="tien-label">Tổng tiền</p>
+                            <div class="tongtien-ghe">
+                                <span>360,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-pre">
+            <div class="pre"><a href="@Url.Action("datve3")"><i class="fas fa-chevron-left"></i> Quay lại</a></div>
+            <div class="next"><a href="@Url.Action("thanhToanView")">Tiếp tục <i class="fas fa-chevron-right"></i></a></div>
+        </div>
+    </div>
+</section>
+<script>
+    var lineStep = document.querySelector('.step-1');
+    var numberStep = document.querySelector('.step-num2 span');
+    lineStep.style.backgroundColor = 'var(--special-font-color)';
+    numberStep.style.backgroundColor = 'var(--special-font-color)';
+    var lineStep = document.querySelector('.step-2');
+    var numberStep = document.querySelector('.step-num3 span');
+    lineStep.style.backgroundColor = 'var(--special-font-color)';
+    numberStep.style.backgroundColor = 'var(--special-font-color)';
+    var lineStep = document.querySelector('.step-3');
+    var numberStep = document.querySelector('.step-num4 span');
+    lineStep.style.backgroundColor = 'var(--special-font-color)';
+    numberStep.style.backgroundColor = 'var(--special-font-color)';
+</script>

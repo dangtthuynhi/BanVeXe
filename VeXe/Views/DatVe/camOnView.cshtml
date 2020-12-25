@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "camOnView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sScript{
+    <script src="~/resources/js/quytrinh_datvexe.js"></script>
+    <script src="~/resources/js/datvexe.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+}
+@section sCss{
+    <link rel="stylesheet" href="~/resources/css/datvexe.css">
+}
+
+<section class="datvexe" id="uptoall">
+    <div class="main-container">
+        <div class="backto-home">
+            <h2 class="tt-done">Thanh toán thành công</h2>
+            <img src="~/resources/img/tenor.gif" alt="">
+            <img src="~/resources/img/tenor.gif" alt="">
+            <img src="~/resources/img/tenor.gif" alt="">
+            <img src="~/resources/img/tenor.gif" alt="">
+            <table class="output-mave">
+                <tr>
+                    <th>Số ghế</th>
+                    <th>Mã vé</th>
+                </tr>
+                <tr class="mave-item mv-item-1">
+                    <td class="soghe-ve">A01</td>
+                    <td class="mave-ve">zxc456cv</td>
+                </tr>
+                <tr class="mave-item mv-item-2">
+                    <td class="soghe-ve">A01</td>
+                    <td class="mave-ve">zxc456cv</td>
+                </tr>
+                <tr class="mave-item mv-item-3">
+                    <td class="soghe-ve">A01</td>
+                    <td class="mave-ve">zxc456cv</td>
+                </tr>
+                <tr class="mave-item mv-item-4">
+                    <td class="soghe-ve">A01</td>
+                    <td class="mave-ve">zxc456cv</td>
+                </tr>
+                <tr class="mave-item mv-item-5">
+                    <td class="soghe-ve">A01</td>
+                    <td class="mave-ve">zxc456cv</td>
+                </tr>
+                <tr class="mave-item mv-item-6">
+                    <td class="soghe-ve">A01</td>
+                    <td class="mave-ve">zxc456cv</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="end-dv-bth">
+            <a class="backtohome-btn btn-tcve" href="@Url.Action("homepageView","Home")">Trở về trang chủ</a>
+            <a class="backtohome-btn btn-bthome" href="@Url.Action("BoSungView","TraCuuVe")">Tra cứu vé</a>
+        </div>
+    </div>
+</section>
+

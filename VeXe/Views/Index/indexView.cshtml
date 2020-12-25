@@ -1,0 +1,177 @@
+﻿@using VeXe.Controllers
+
+@{
+    ViewBag.Title = "index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus - Penguins</title>
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="~/resources/css/index.css">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Lato&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <!-- FONT AWSOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="overray">
+        <!-- HEADING MENU -->
+        <section class="web_container" id="web_header">
+            <div id="head_container">
+                <div id="logo_page">
+                    <h1>
+                        <a href="#"></a>
+                    </h1>
+                </div>
+
+                <div id="login_group">
+                    <div class="login_right" id="lg_facebook">
+                        <a href="#">
+                            <img src="~/resources/img/facebook.png" alt="">
+                        </a>
+                    </div>
+                    <div class="login_right" id="lg_email">
+                        <a href="#">
+                            <img src="~/resources/img/gmail.png" alt="">
+                        </a>
+                    </div>
+                    <div class="login_right" id="lg_language">
+                        <a href="#">
+                            <img src="~/resources/img/vietnam.png" alt="">
+                        </a>
+                    </div>
+                    <div class="login_right" id="lg_button">
+                        <a href="#">
+                            <img src="~/resources/img/user.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <nav id="head_menu">
+
+                    @Html.ActionLink("Home", "homepageView", "Home",null, new {@class = "menu_effect", title = "Home"})
+
+                    @Html.ActionLink("Booking", "datve1", "DatVe",null, new {@class = "menu_effect", title = "booking"})
+
+                    @Html.ActionLink("News", "newsView", "News",null, new {@class = "menu_effect", title = "news"})
+
+                    @Html.ActionLink("Bus Calendar", "loTrinhView", "LoTrinh",null, new {@class = "menu_effect", title = "bus calender"})
+
+                    @Html.ActionLink("contact us", "lienHeView", "LienHe",null, new {@class = "menu_effect", title = "contact us"})
+                </nav>
+                <!-- btn menu -->
+                <label class="nav__bars-btn" for="nav-input">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                <input type="checkbox" id="nav-input" class="input_check">
+
+                <!-- overay -->
+                <label class="nav__overlay" for="nav-input"></label>
+
+                <!-- narbars responsive -->
+                <div class="all__menu-res">
+                    <div id="logingroup__res">
+                        <div class="login_right-res" id="lg_facebook-res">
+                            <a href="#">
+                                <img src="~/resources/img/user.png" alt="">
+                            </a>
+                        </div>
+                        <div class="login_right-res" id="lg_email-res">
+                            <a href="#">
+                                <img src="~/resources/img/gmail.png" alt="">
+                            </a>
+                        </div>
+                        <div class="login_right-res" id="lg_language-res">
+                            <a href="#">
+                                <img src="~/resources/img/vietnam.png" alt="">
+                            </a>
+                        </div>
+                        <div class="login_right-res" id="lg_button-res">
+                            <a href="#">
+                                <img src="~/resources/img/facebook.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <nav id="headmenu__res">
+                        <a href="#" class="menueffect__res">
+                            <i class="fas fa-home"></i>
+                            <span>home</span>
+                        </a>
+                        <a href="#" class="menueffect__res">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>booking</span>
+                        </a>
+                        <a href="#" class="menueffect__res">
+                            <i class="fas fa-newspaper"></i>
+                            <span>news</span>
+                        </a>
+                        <a href="#" class="menueffect__res">
+                            <i class="fas fa-user-friends"></i>
+                            <span>recruitment</span>
+                        </a>
+                        <a href="#" class="menueffect__res">
+                            <i class="fas fa-address-card"></i>
+                            <span>about us</span>
+                        </a>
+                        <a href="#" class="menueffect__res">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>login</span>
+                        </a>
+                    </nav>
+                </div>
+
+            </div>
+            <!--id="head_container"-->
+        </section>
+
+        <!--MAIN BODY-->
+        <section class="web_container" id="web_body">
+            <div id="out_body">
+                <div class="main_content">
+                    <h2 id="text_head">
+                        <span>Welcome</span>
+                    </h2>
+                    <h1 id="main_head">
+                        <span>The Bus Penguins</span>
+                    </h1>
+
+                    <div class="headline_descripstion">
+                        <div class="separator">
+                            <div class="line line_left"></div>
+                            <div class="content_icon">
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="line line_right"></div>
+                        </div>
+
+                        <div class="single_animation">
+                            <h5>Ready to be opened</h5>
+                            @Html.ActionLink("Home","homepageView","Home",null,new{@di="btn_home"})
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
+

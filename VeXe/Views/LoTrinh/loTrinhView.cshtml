@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "loTrinhView";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section sScript{
+    <script src="~/resources/js/lichtrinh.js"></script>
+    <script src="~/resources/js/public_hiddenNavbar.js"></script>
+
+
+}
+@section sCss{
+    <link rel="stylesheet" href="~/resources/css/lichtrinh.css">
+}
+@using System.Web.Mvc.Html
+@model List<VeXe.Models.lichtrinh>
+
+<!-- Lịch trình -->
+<section class="lich-trinh">
+    <div class="main-container" id="lich-trinh-parent">
+        <div class="intro-lich">
+            <h1>Lịch trình tuyến xe</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel facere a at expedita autem ratione
+                repellat non porro dolores rerum dicta, totam libero commodi atque veniam unde voluptate corrupti
+                itaque!
+            </p>
+        </div>
+        <div class="search-chuyen">
+            <div class="out-input">
+                <input type="text" id="txtdiemdi" class="search-for diem-di" placeholder="Tìm điểm đi...">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="out-input">
+                <input type="text" id="txtdiemden" class="search-for diem-den" placeholder="Tìm điểm đến...">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        <div class="thongtin-chuyen">
+            <table class="tb-lich" >
+                <thead class="tb-head">
+                    <tr class="table-content-head">
+                        <th>Nơi đi</th>
+                        <th>Nơi đến</th>
+                        <th>Giá vé</th>
+                        <th colspan="2">Giờ chạy</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="tb-body" id="setdata">
+               @foreach(var item in Model)
+               {
+                   var i = item.lotrinhdetails.malotrinh;
+                        <tr class="body-row-content">
+                            <td class="tbody-xuatphat">@item.tuyendetails.noibatdau</td>
+                            <td class="tbody-ketthuc">@item.tuyendetails.noiketthuc</td>
+                            <td class="tbody-giave">@item.lotrinhdetails.gia</td>
+                            <td class="tbody-giochay">@item.lotrinhdetails.thoigian</td>
+                            <td class="tbody-datve">
+                                <button class="tbody-buy">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    @Html.ActionLink("Đặt vé","datve1","DatVe",
+                                        new{name=i},null)
+                                </button>
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+    var $row = $('#setdata tr');
+    var filters = { col1: '', col2: '' };
+    $('#txtdiemdi').keyup(function() {
+        var val = $(this).val().toUpperCase();
+        filters.col1 = val;
+        applyFilters();
+    });
+    $('#txtdiemden').keyup(function() {
+        var val = $(this).val().toUpperCase();
+        filters.col2 = val;
+        applyFilters();
+    });
+
+    function applyFilters() {
+        $row.show();
+        $row.filter(function() {
+            var searchDiemDi = $(this).find("td:nth-child(1)").text();
+            return !~searchDiemDi.indexOf(filters.col1);
+
+        }).hide();
+        $row.filter(function() {
+            var searchDiemDen = $(this).find("td:nth-child(2)").text();
+            return !~searchDiemDen.indexOf(filters.col2);
+
+        }).hide();
+    };
+
+
+
+</script>
+
+
+
+
+
